@@ -22,7 +22,7 @@
     },
     "cdmContainerUrl": {
       "type": "string",
-      "defaultValue": "https://github.com/microsoft/OHDSIonAzure/releases/download/v2.1/",
+      "defaultValue": "https://github.com/ezfass/OHDSIonAzureEzCopy/releases/download/v0.1/",
       "metadata": {
         "description": "The url of the container where the cdm is stored"
       }
