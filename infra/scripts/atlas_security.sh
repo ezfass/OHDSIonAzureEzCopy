@@ -11,6 +11,11 @@ apk --update add postgresql-client apache2-utils
 
 psql -v ON_ERROR_STOP=1 -e "$OHDSI_ADMIN_CONNECTION_STRING" -c "$SQL_ATLAS_CREATE_SECURITY"
 
+until curl -fsSI "$WEBAPI_URL/user/login/db" > /dev/null; do
+    printf '\nsleep for 5s.\n'
+    sleep 5
+done
+
 count=1
 for i in ${ATLAS_USERS//,/ }
 do
